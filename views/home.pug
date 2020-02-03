@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Home
+        link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css")
+        style
+            include home.css
+            
+            
+    body
+        div#root
+            div#todo
+                h1 TODO app
+                form#submitForm
+                    input#input(type='text' name='input' placeholder="Enter some text")
+                    button(type='button' onclick='buttonAdd()')
+                        i(class="fas fa-plus")
+                table#table(style='width:400px')
+
+        script
+            include home.js
