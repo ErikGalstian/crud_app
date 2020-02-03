@@ -10,7 +10,7 @@ const buttonAdd = () => {
     text: document.querySelector('#input').value
   };
   // POST - add an item
-  fetch('http://localhost:4000/add', {
+  fetch('http://localhost:4000/api/todos', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -29,7 +29,7 @@ const buttonDelete = id => {
     text: document.querySelector('#input').value
   };
   // DELETE - delete an item
-  fetch('http://localhost:4000/delete', {
+  fetch('http://localhost:4000/api/todos', {
     method: 'DELETE',
     headers: {
       Accept: 'application/json',
@@ -43,7 +43,7 @@ const buttonDelete = id => {
 // Fetch function that fetches and renderes the table
 const fetchTable = () => {
   document.querySelector('#table').innerHTML = '';
-  fetch('http://localhost:4000/items')
+  fetch('http://localhost:4000/api/todos')
     .then(response => response.json())
     .then(data => {
       const items = data[0];

@@ -3,7 +3,7 @@ const buttonEdit = id => {
     id: id,
     text: document.querySelector('#input').value
   };
-  fetch('http://localhost:4000/edit/update', {
+  fetch('http://localhost:4000/api/todos', {
     method: 'PUT',
     headers: {
       Accept: 'application/json',
