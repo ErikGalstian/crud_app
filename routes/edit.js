@@ -11,11 +11,4 @@ router.get('/edit', (req, res) => {
   }
 });
 
-// PUT - update item
-router.put('/edit/update', (req, res) => {
-  global.itemList.find(el => el.id === +req.body.id).text = req.body.text;
-  console.log(`Updated the record with id: ${req.body.id}`);
-  res.send(`Updated the record with id: ${req.body.id}`);
-});
-
 module.exports = router;

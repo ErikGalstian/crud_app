@@ -6,6 +6,7 @@ const edit = require('./routes/edit');
 const notFound = require('./routes/notFound');
 const session = require('express-session');
 const bodyParser = require('body-parser');
+const todos = require('./routes/api/todos');
 
 // Init express
 const app = express();
@@ -48,3 +49,6 @@ app.use(edit);
 
 // 404 page
 app.use(notFound);
+
+//-----------API endpoints-----------
+app.use(todos);
