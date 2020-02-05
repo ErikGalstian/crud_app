@@ -11,6 +11,7 @@ const buttonDelete = id => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(item)
+  }).then(() => {
+    fetchTable();
   });
-  fetchTable();
 };

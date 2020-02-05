@@ -15,7 +15,8 @@ const buttonAdd = () => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(item)
+  }).then(() => {
+    document.querySelector('#input').value = ''; // <--- Reset the input field after adding the item
+    fetchTable();
   });
-  document.querySelector('#input').value = ''; // <--- Reset the input field after adding the item
-  fetchTable();
 };

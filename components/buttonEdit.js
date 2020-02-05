@@ -11,6 +11,7 @@ const buttonEdit = id => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(item)
+  }).then(() => {
+    window.location.replace('http://localhost:4000'); // Redirect to homepage
   });
-  window.location.replace('http://localhost:4000'); // Redirect to homepage
 };
