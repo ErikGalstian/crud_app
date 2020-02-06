@@ -6,7 +6,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Edit
         style
-            include ../styles/edit.css
+            include ../public/styles/edit.css
     body
         div#root
             div#todo
@@ -15,4 +15,4 @@ html(lang="en")
                     input#input(type='text' name='input' value= text)
                     button(type='button' onclick='buttonEdit("'+ id +'")') Edit
         script
-            include ../components/buttonEdit.js
+            include ../public/components/buttonEdit.js
